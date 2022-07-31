@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,600;1,700;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+:root {
+    --nav-color: #efe0ce;
+    --green-hover: #0f8e0d;
+}
+@media screen and (max-width: 768px) {
+    .navigation ul{
+        flex-direction: column;
+    }
+}
+.header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    padding:15px ;
+    background-color: #fff;
+}
+.headerTitle{
+    font-weight: 600;
+    padding: auto;
+}
+.social-icons{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.s-icons{
+    width: 30px;
+    height: 30px;
+    margin: 0.5rem;
+}
+.s-icons:hover {
+    background-color: var(--nav-color);
+    cursor: pointer;
+    border-radius: 50%;
+}
+.icons{
+    width: 30px;
+    height: 30px;
+    margin: 0.5rem;
+}
+.navigation ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--nav-color);
+    font-weight: 550;
+}
+.navigation{
+    align-items: baseline;
+}
+.navigation li{
+    display: inline;
+    margin: 20px;
+}
+.navigation li:hover{
+    cursor: pointer;
+    color: var(--green-hover);
+    transition: 0.4s ease-in-out;
+}
+.toggle{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    margin: 15px;
+    flex-direction: column;
+    display: none;
+}
+.toggle div{
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #1b1b1b;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    margin-top: 0.3rem;
+    
+}
+.showToggle{
+    display: flex !important;
+}
