@@ -9,6 +9,7 @@
 :root {
     --nav-color: #efe0ce;
     --green-hover: #0f8e0d;
+    --text-color: #363636;
 }
 @media screen and (max-width: 768px) {
     .list li{
@@ -32,7 +33,7 @@
     .menu-burger .burger-linear{
         width: 2rem;
         height: 0.25rem;
-        background-color: #000000;
+        background-color: var(--text-color);
         border-radius: 4px;
         transition: all 0.4s ease;
     }
@@ -41,7 +42,7 @@
         width: 2rem;
         height: 0.25rem;
         position:absolute;
-        background-color: #000000;
+        background-color: var(--text-color);
         border-radius: 4px;
         content: "";
         transition: all 0.4s ease;
@@ -72,6 +73,7 @@
     justify-content: space-between;
     padding:15px ;
     background-color: #fff;
+    color: var(--text-color);
     z-index: 10;
 }
 .hover-fx{
@@ -79,11 +81,11 @@
     width:35px;
     height: 35px;
     background-color: #fff;
-    border:solid black 1.5px;
+    border:solid var(--text-color) 1.5px;
     display: inline-block;
     cursor: pointer;
     margin: 0.5rem;
-    transition: 400ms;
+    transition: 350ms;
     border-radius: 50%;
     text-align: center;
     position: relative;
@@ -91,10 +93,16 @@
 .hover-fx:hover{
     background-color: #b4936d;
     color: #fff;
-    border-color: #b4936d;
+    border-color: #957b5d;
+}
+.hover-fx::after{
+    width: 40px;
+    height: 40px;
+    background-color: var(--text-color);
+    border: 1px solid var(--text-color);
 }
 .social-icons a{
-    color: #000;
+    color: var(--text-color);
 }
 .headerTitle{
     font-weight: 600;
@@ -106,7 +114,7 @@
     align-items: center;
     margin: auto;
 }
-.s-icons{
+/* .s-icons{
     width: 30px;
     height: 30px;
     margin: 0.5rem;
@@ -115,7 +123,7 @@
     background-color: var(--nav-color);
     cursor: pointer;
     border-radius: 50%;
-}
+} */
 .icons{
     width: 30px;
     height: 30px;
@@ -125,18 +133,15 @@
     width: 100%;
     height: 60px;
     list-style: none;
-    display: flex;
+    display: flex;    /* changed from absolute */
     justify-content: center;
     align-items: center;
     background-color: var(--nav-color);
+    color: var(--text-color);
     font-weight: 550;
-    position: absolute;
-    top: 80px;
     transition: all 0.5s ease;
 }
-.navigation{
-    align-items: baseline;
-}
+
 .list li{
     display: flex;
     margin: 20px;
@@ -150,7 +155,7 @@
 .menu-burger{ 
     width: 2rem;
     height: 2rem;
-    position: relative;
+    position: absolute;
     margin: 15px;
     display: flex;
     justify-content: center;
@@ -158,7 +163,37 @@
     z-index: 5;
     cursor: pointer;
 }
+ /* banner */
+.banner{
+    width: 100%;
+    height: 85vh;
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--text-color);
+}
+.banner-content{
+    padding: 290px 70px;
+}
+.banner-title{
+    font-size: 2.7rem;
+    margin-bottom: 15px;
+}
+.banner-text {
+    font-size: 1rem;
+    margin-bottom: 50px;
+}
+.banner-btn {
+    background-color: transparent;
+    border: 3px solid rgb(129, 129, 129);
+    padding: 2px 25px;
+    transition: all 0.4s ease;
+    font-weight: 600;
 
-/* .showToggle{
-    display: flex !important;
-} */
+}
+.banner-btn:hover {
+    background-color: var(--green-hover);
+    cursor: pointer;
+    /* color: #fff; */
+}
