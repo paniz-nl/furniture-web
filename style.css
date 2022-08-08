@@ -91,9 +91,9 @@
     position: relative;
 }
 .hover-fx:hover{
-    background-color: #b4936d;
+    background-color:rgb(150, 150, 150);;
     color: #fff;
-    border-color: #957b5d;
+    border-color: #666666;
 }
 .hover-fx::after{
     width: 40px;
@@ -186,7 +186,7 @@
 }
 .banner-btn {
     background-color: transparent;
-    border: 3px solid rgb(129, 129, 129);
+    border: 3px solid #818181;
     padding: 2px 25px;
     transition: all 0.4s ease;
     font-weight: 600;
@@ -195,5 +195,4 @@
 .banner-btn:hover {
     background-color: var(--green-hover);
     cursor: pointer;
-    /* color: #fff; */
 }
