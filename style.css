@@ -359,3 +359,36 @@
     font-size: 1.3rem;
     color: var(--text-color);
 }
+
+/* about section */
+.about {
+    text-align: center;
+    justify-content: center;
+}
+.about img {
+    width: 100%;
+    max-height: 55vh;
+}
+.about-title {
+    font-size: 1.7rem;
+    font-weight: 510;
+    margin:20px ;
+}
+.about-content {
+    margin: 40px 80px 80px 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
+    gap:25px;
+    grid-template-rows: 1fr;
+}
+.about-text{
+    text-align: left;
+    font-size: 15px;
+    overflow-y: hidden;
+    line-height: 27px;
+}
+.about-text .card-button{
+    margin-top: 50px;
+    margin-left: 0;
+}
+/* footer section start */
